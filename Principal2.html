@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo3.css">
+        <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
+        <style>
+            @import url('https://fonts.cdnfonts.com/css/common-pixel');
+            #sidebar {
+                position: fixed;
+                top: 0;
+                left: -250px;
+                width: 250px;
+                height: 100vh;
+                background-color: #1c1364;
+                color: #00aaff;
+                padding: 1rem;
+                z-index: 999;
+                transition: all 0.3s ease-in-out;
+            }
+            #sidebar.active {
+                left: 0;
+            }
+            #sidebar ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            #sidebar ul li {
+                padding: 0.5rem;
+                border-bottom: 1px solid #333;
+            }
+            #sidebar ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+            #sidebar ul li:hover {
+                background-color: #333;
+            }
+            /* Estilos para el botón del menú */
+            #menu-toggle {
+                position: fixed;
+                top: 1rem;
+                right: 1rem;
+                cursor: pointer;
+                z-index: 999;
+            }
+            #menu-toggle i {
+                font-size: 2rem;
+                color: #fff;
+            }
+            .form-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 120vh;
+                width: 80%; /* Reducir el ancho de la sección contenedora */
+                max-width: 1200px;
+                margin: 0 auto; /* Centrar el contenedor */
+                background-image: url(Stars.gif);
+                background-color: rgb(79, 14, 133);
+                background-size: cover;
+                background-position: left center; /* Ajustar la posición de la imagen de fondo */
+                font-family: 'Common Pixel', sans-serif;
+            }
+            
+            form {
+                width: 200%;
+                max-width: 800px;
+                padding: 20px;
+                background-color: #2d09ba;
+                border-radius: 5px;
+                border-color:blueviolet;
+                box-shadow: 0 0 10px rgba(83, 15, 118, 0.3);
+                border: 3px solid #5d1385;
+                padding: 20px;
+                width: 400px;
+                margin: 0 auto;
+                position: relative;
+                font-family: 'Common Pixel', sans-serif;
+                color: rgb(90, 89, 100);
+                -webkit-text-stroke: 0.25px rgb(164, 0, 0);
+            }
+            
+            label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            
+            input[type="text"],
+            input[type="email"],
+            select,
+            textarea {
+                display: block;
+                width: 100%;
+                padding: 0.5rem;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                border: none;
+                box-shadow: 0 0 5px rgba(0,0,0,0.1);
+                font-family: 'Common Pixel', sans-serif;
+                color: rgb(8, 0, 127);
+                -webkit-text-stroke: 0.25px rgb(52, 252, 232);
+            }
+            
+            input[type="submit"] {
+                background-color: #333;
+                color: #693095;
+                border: none;
+                border-radius: 5px;
+                padding: 0.5 rem 1 rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                font-family: 'Common Pixel', sans-serif;
+                color: rgb(8, 0, 127);
+                -webkit-text-stroke: 0.25px rgb(52, 252, 232);
+            }
+            
+            input[type="submit"]:hover {
+                background-color: #444;
+            }
+            
+            
+            input[type="text"],
+            input[type="email"],
+            input[type="number"],
+            select,
+            textarea,
+            input[type="password"] {
+                margin: 10px 0;
+                padding: 5px;
+                width: 100%;
+                border: 1px solid #500884;
+                font-family: 'Common Pixel', sans-serif;
+                color: rgb(8, 0, 127);
+                -webkit-text-stroke: 0.25px rgb(52, 252, 232);
+            }
+            
+            input[type="reset"],
+            input[type="submit"] {
+                margin: 10px 5px 0 0;
+                padding: 5px 10px;
+                border: none;
+                background-color: #3b32be;
+                color: rgb(117, 0, 159);
+                cursor: pointer;
+                font-family: 'Common Pixel', sans-serif;
+            }
+            
+            input[type="reset"]:hover,
+            input[type="submit"]:hover {
+                background-color: #2400a7;
+            }
+            
+            input:required:invalid {
+                border-color: red;
+            }
+            
+            input:focus,
+            select:focus,
+            textarea:focus {
+                border-color: blue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <a href="#">Que te ha parecido esta web?</a>
+            <a href="#">Bonita</a>
+            <a href="#">Ignorable</a>
+
+        </nav>
+        <div class="form-container">
+            <button id="menu-toggle"><i class="fa fa-bars"></i></button>
+            <div id="sidebar">
+                <ul>
+                    <li><a href="Portada.html">Inicio</a></li>            <! El interior del menu vertical ocultable __>
+                    <li><a href="#">En desarrollo...</a></li>
+                    <li><a href="Galeria.html">Nuestros planetas</a></li>
+                </ul>
+            </div>
+    
+            <h3>RELLENALO PARA VIAJAR CON NOSOTROS:</h3>
+            <form method="post">
+                <label for="nombre">Nombre del astronauta:</label>        <! El formulario y todos sus inputs  __>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe el nombre aqui..." required>
+                <br>
+                <label for="email">IP cosmica (email):</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" min="1" max="99" required>
+                <br>
+                <label for="genero">Genero:</label>
+                <select id="genero" name="genero" required>
+                    <option value="">Selecciona tu opcion</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="otro">Helicóptero APACHE</option>
+                    <option value="otro">Otro...</option>
+                </select>
+                <br>
+                <label for="comentarios">Datos adiccionales:</label>
+                <textarea id="comentarios" name="comentarios"></textarea>
+                <br>
+                <label for="contrasena">Contraseña de su cohete:</label>
+                <input type="password" id="contrasena" name="contrasena" required restricted>
+                <br>
+                <input type="reset" value="Clean">
+                <input type="submit" value="Send">
+                </form>
+        </div>
+
+        <script> // El script que crea el menuu lateral
+            var menuToggle = document.getElementById('menu-toggle');    
+            var sidebar = document.getElementById('sidebar'); 
+            menuToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('active');
+            });
+        </script>  
+
+    </body>
+</html>

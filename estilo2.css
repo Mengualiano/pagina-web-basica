@@ -1,0 +1,160 @@
+@import url('https://fonts.cdnfonts.com/css/common-pixel');
+#sidebar {
+	position: fixed; 
+	top: 0;
+	left: -250px; /*Estética de la barra vertical izquierda*/
+	width: 250px;
+	height: 100vh;
+	background-color: #1c1364;
+	color: #00aaff;
+	padding: 1rem;
+	z-index: 999;
+	transition: all 0.3s ease-in-out;
+}
+#sidebar.active {
+	left: 0; /*Para mover la barra cuando este activa*/
+}
+#sidebar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#sidebar ul li {
+	padding: 0.5rem;
+	border-bottom: 1px solid #333;
+}
+#sidebar ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+#sidebar ul li:hover {
+	background-color: #333;
+}
+/* Estilos para el botón del menú */
+#menu-toggle {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	cursor: pointer;
+	z-index: 999;
+}
+#menu-toggle i {
+	font-size: 2rem;
+	color: #fff;
+}
+.form-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 120vh;
+	width: 80%; /* Reduce el ancho de la sección contenedora */
+	max-width: 1200px;
+	margin: 0 auto; /* Centra el contenedor */
+	background-image: url(Stars.gif);
+	background-color: rgb(79, 14, 133);
+	background-size: cover;
+	background-position: left center; /* Ajusta la posición de la imagen de fondo */
+	font-family: 'Common Pixel', sans-serif;
+}
+
+form {
+	width: 200%;
+	max-width: 800px;
+	padding: 20px;
+	background-color: #2d09ba;
+	border-radius: 5px;
+	border-color:blueviolet;
+	box-shadow: 0 0 10px rgba(83, 15, 118, 0.3);
+	border: 3px solid #5d1385;
+	padding: 20px;
+	width: 400px;
+	margin: 0 auto;
+	position: relative;
+	font-family: 'Common Pixel', sans-serif;
+	color: rgb(56, 55, 66);
+	-webkit-text-stroke: 0.25px rgb(3, 37, 33);
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+	display: block;
+	width: 100%;
+	padding: 0.5rem;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	font-family: 'Common Pixel', sans-serif;
+	color: rgb(8, 0, 127);
+	-webkit-text-stroke: 0.25px rgb(52, 252, 232);
+}
+
+input[type="submit"] {
+	background-color: #333;
+	color: #693095;
+	border: none;
+	border-radius: 5px;
+	padding: 0.5 rem 1 rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	font-family: 'Common Pixel', sans-serif;
+	color: rgb(8, 0, 127);
+	-webkit-text-stroke: 0.25px rgb(52, 252, 232);
+}
+
+input[type="submit"]:hover {
+	background-color: #444;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea,
+input[type="password"] {
+	margin: 10px 0;
+	padding: 5px;
+	width: 100%;
+	border: 1px solid #500884;
+	font-family: 'Common Pixel', sans-serif;
+	color: rgb(8, 0, 127);
+	-webkit-text-stroke: 0.25px rgb(52, 252, 232);
+}
+
+input[type="reset"],
+input[type="submit"] {
+	margin: 10px 5px 0 0;
+	padding: 5px 10px;
+	border: none;
+	background-color: #3b32be;
+	color: rgb(117, 0, 159);
+	cursor: pointer;
+	font-family: 'Common Pixel', sans-serif;
+}
+
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background-color: #2400a7;
+}
+
+input:required:invalid {
+	border-color: red;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	border-color: blue;
+}
+
+
+/*Cada uno de los inputos son los cambios estéticos de cada parte del formulario*/

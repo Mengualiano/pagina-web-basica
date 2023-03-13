@@ -1,0 +1,52 @@
+@import url('https://fonts.cdnfonts.com/css/common-pixel');
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
+body {
+    background: url(Stars.gif) no-repeat center center fixed;
+    background-size: cover; /*El fondo del html */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 0 auto; /* Centra la galería */
+    max-width: 800px; /* Limita el ancho de la galería */
+}
+.container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+h3 {
+    text-align: center;
+    font-family: 'Common Pixel', sans-serif;
+    color: rgb(8, 0, 127);
+    -webkit-text-stroke: 0.25px rgb(52, 252, 232);
+    font-size: 48px;
+    margin-top: 50px; /* Separa entre el título y la galería */
+}
+nav {
+    background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+nav a {
+    display: inline-block;
+    color: rgb(8, 0, 127);
+    text-decoration: none;
+    font-family: 'Common Pixel', sans-serif;
+    font-size: 24px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.25px rgb(52, 252, 232);
+    transition: all 0.3s ease;
+}
+nav a:hover {
+    color: rgb(52, 252, 232);
+    -webkit-text-stroke: 0.5px rgb(52, 252, 232);
+}
+
+/*Con esto cada vez que se hace un hover en los menus horizontales, hay una transición de colores en las frases*/
